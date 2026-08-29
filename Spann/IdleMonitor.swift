@@ -2,8 +2,45 @@ import AppKit
 import CoreGraphics
 import Foundation
 
+enum InputMonitoringPermission {
+    static var isGranted: Bool {
+        CGPreflightListenEventAccess()
+    }
+
+    @discardableResult
+    static func request() -> Bool {
+        CGRequestListenEventAccess()
+    }
+
+    static func openSystemSettings() {
+        guard let url = URL(
+            string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent"
+        ) else {
+            return
+        }
+        NSWorkspace.shared.open(url)
+    }
+}
+
 @MainActor
 final class IdleMonitor {
+    private static let activityEventTypes: [CGEventType] = [
+        .keyDown,
+        .keyUp,
+        .flagsChanged,
+        .mouseMoved,
+        .leftMouseDown,
+        .leftMouseUp,
+        .leftMouseDragged,
+        .rightMouseDown,
+        .rightMouseUp,
+        .rightMouseDragged,
+        .otherMouseDown,
+        .otherMouseUp,
+        .otherMouseDragged,
+        .scrollWheel
+    ]
+
     private weak var store: TrackerStore?
     private var timer: Timer?
     private var promptedDuringCurrentIdle = false
@@ -14,11 +51,13 @@ final class IdleMonitor {
 
     func start() {
         guard timer == nil else { return }
-        timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { [weak self] _ in
+        let timer = Timer(timeInterval: 15, repeats: true) { [weak self] _ in
             Task { @MainActor in
                 self?.checkIdleState()
             }
         }
+        RunLoop.main.add(timer, forMode: .common)
+        self.timer = timer
         checkIdleState()
     }
 
@@ -29,11 +68,16 @@ final class IdleMonitor {
 
     private func checkIdleState() {
         guard let store else { return }
+        guard InputMonitoringPermission.isGranted else { return }
 
-        let idleSeconds = CGEventSource.secondsSinceLastEventType(
-            .combinedSessionState,
-            eventType: .null
-        )
+        let idleSeconds = Self.activityEventTypes
+            .map {
+                CGEventSource.secondsSinceLastEventType(
+                    .combinedSessionState,
+                    eventType: $0
+                )
+            }
+            .min() ?? 0
 
         if idleSeconds < 5 {
             promptedDuringCurrentIdle = false
@@ -74,15 +118,16 @@ final class IdleMonitor {
         alert.icon = NSImage(systemSymbolName: "moon.zzz.fill", accessibilityDescription: nil)
         alert.addButton(withTitle: "Keep Time")
         alert.addButton(withTitle: "Remove Idle Time")
+        alert.addButton(withTitle: "Pause at \(formatter.string(from: idleStart))")
         alert.addButton(withTitle: "Stop at \(formatter.string(from: idleStart))")
 
-        switch alert.runModal() {
-        case .alertSecondButtonReturn:
+        let response = alert.runModal()
+        if response == .alertSecondButtonReturn {
             store.excludeIdleTime(startingAt: idleStart, endingAt: now)
-        case .alertThirdButtonReturn:
+        } else if response == .alertThirdButtonReturn {
+            store.pause(at: idleStart)
+        } else if response.rawValue == NSApplication.ModalResponse.alertThirdButtonReturn.rawValue + 1 {
             store.stop(at: idleStart)
-        default:
-            break
         }
     }
 }

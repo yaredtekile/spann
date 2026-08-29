@@ -5,11 +5,13 @@ struct SettingsView: View {
     @EnvironmentObject private var store: TrackerStore
     @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
     @State private var loginItemError: String?
+    @State private var hasInputMonitoringPermission = InputMonitoringPermission.isGranted
 
     var body: some View {
         Form {
             Section("Idle detection") {
                 Picker("Ask me after", selection: idleBinding) {
+                    Text("1 minute (Testing)").tag(1)
                     Text("5 minutes").tag(5)
                     Text("10 minutes").tag(10)
                     Text("15 minutes").tag(15)
@@ -20,6 +22,25 @@ struct SettingsView: View {
                 Text("Spann checks the time since the last keyboard or mouse event. It never records what you type or click.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+
+                HStack {
+                    Label(
+                        hasInputMonitoringPermission ? "Input Monitoring allowed" : "Input Monitoring required",
+                        systemImage: hasInputMonitoringPermission ? "checkmark.circle.fill" : "exclamationmark.circle.fill"
+                    )
+                    .foregroundStyle(hasInputMonitoringPermission ? .green : .orange)
+
+                    Spacer()
+
+                    if !hasInputMonitoringPermission {
+                        Button("Allow") {
+                            hasInputMonitoringPermission = InputMonitoringPermission.request()
+                        }
+                        Button("Open Settings") {
+                            InputMonitoringPermission.openSystemSettings()
+                        }
+                    }
+                }
             }
 
             Section("General") {
@@ -48,6 +69,9 @@ struct SettingsView: View {
         }
         .formStyle(.grouped)
         .frame(width: 480, height: 410)
+        .onAppear {
+            hasInputMonitoringPermission = InputMonitoringPermission.isGranted
+        }
     }
 
     private var idleBinding: Binding<Int> {

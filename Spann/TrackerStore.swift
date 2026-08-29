@@ -75,7 +75,7 @@ final class TrackerStore: ObservableObject {
 
     func pause(at date: Date = .now) {
         guard var timer = activeTimer, timer.pausedAt == nil else { return }
-        timer.pausedAt = date
+        timer.pausedAt = max(date, timer.startedAt)
         activeTimer = timer
         persist()
     }

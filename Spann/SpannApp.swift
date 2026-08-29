@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 
 @main
@@ -43,16 +44,17 @@ struct SpannApp: App {
 
 private struct MenuBarLabel: View {
     @EnvironmentObject private var store: TrackerStore
+    @State private var now = Date()
+    private let ticker = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
         if store.isRunning {
-            TimelineView(.periodic(from: .now, by: 1)) { context in
-                HStack(spacing: 5) {
-                    Image(systemName: store.activeTimer?.isPaused == true ? "pause.fill" : "record.circle.fill")
-                    Text(store.elapsed(at: context.date).spannClockText)
-                        .monospacedDigit()
-                }
+            HStack(spacing: 5) {
+                Image(systemName: store.activeTimer?.isPaused == true ? "pause.fill" : "record.circle.fill")
+                Text(store.elapsed(at: now).spannClockText)
+                    .monospacedDigit()
             }
+            .onReceive(ticker) { now = $0 }
         } else {
             Image(systemName: "hourglass")
                 .accessibilityLabel("Spann")

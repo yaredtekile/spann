@@ -16,7 +16,24 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.spann.tracker</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>spann</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSInputMonitoringUsageDescription</key>
+	<string>Spann uses inactivity duration to ask whether you are still working. It never records what you type or click.</string>
 </dict>
 </plist>

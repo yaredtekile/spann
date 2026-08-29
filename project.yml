@@ -21,6 +21,14 @@ targets:
       - path: Shared
     info:
       path: Spann/Info.plist
+      properties:
+        LSUIElement: true
+        LSApplicationCategoryType: public.app-category.productivity
+        NSInputMonitoringUsageDescription: Spann uses inactivity duration to ask whether you are still working. It never records what you type or click.
+        CFBundleURLTypes:
+          - CFBundleURLName: com.spann.tracker
+            CFBundleURLSchemes:
+              - spann
     entitlements:
       path: Spann/Spann.entitlements
     settings:

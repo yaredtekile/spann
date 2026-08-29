@@ -5,6 +5,8 @@ struct MenuBarView: View {
     @EnvironmentObject private var store: TrackerStore
     @Environment(\.openWindow) private var openWindow
     @State private var newProjectName = ""
+    @State private var hasInputMonitoringPermission = InputMonitoringPermission.isGranted
+    @State private var permissionWasRequested = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -25,6 +27,9 @@ struct MenuBarView: View {
                 )
             }
         )
+        .onAppear {
+            hasInputMonitoringPermission = InputMonitoringPermission.isGranted
+        }
     }
 
     private var header: some View {
@@ -138,6 +143,10 @@ struct MenuBarView: View {
                     .foregroundStyle(.secondary)
             }
 
+            if store.idleThresholdMinutes > 0 && !hasInputMonitoringPermission {
+                permissionCard
+            }
+
             if store.availableProjects.isEmpty {
                 Text("Create your first project, then press play.")
                     .font(.system(size: 12, design: .rounded))
@@ -173,6 +182,50 @@ struct MenuBarView: View {
         }
         .padding(.horizontal, 18)
         .padding(.vertical, 16)
+    }
+
+    private var permissionCard: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "hand.raised.fill")
+                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(.orange)
+                .frame(width: 26, height: 26)
+                .background(Color.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
+
+            VStack(alignment: .leading, spacing: 5) {
+                Text("Allow idle detection")
+                    .font(.system(size: 11, weight: .bold, design: .rounded))
+                Text("Spann only reads how long your Mac has been inactive—never what you type or click.")
+                    .font(.system(size: 10, design: .rounded))
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                HStack(spacing: 10) {
+                    Button(permissionWasRequested ? "Try Again" : "Allow") {
+                        permissionWasRequested = true
+                        hasInputMonitoringPermission = InputMonitoringPermission.request()
+                    }
+                    .font(.system(size: 10, weight: .bold, design: .rounded))
+
+                    if permissionWasRequested {
+                        Button("Open Settings") {
+                            InputMonitoringPermission.openSystemSettings()
+                        }
+                        .font(.system(size: 10, weight: .medium, design: .rounded))
+                    }
+                }
+                .buttonStyle(.link)
+            }
+        }
+        .padding(10)
+        .background(
+            RoundedRectangle(cornerRadius: 11)
+                .fill(Color.orange.opacity(0.07))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 11)
+                        .strokeBorder(Color.orange.opacity(0.18))
+                )
+        )
     }
 
     private func projectRow(_ project: SpannProject) -> some View {
