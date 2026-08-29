@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07A5AD4C74D2A073BB15C9E2 /* SpannWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 59C641972EADF1A2EA07059C /* SpannWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B9EEE53AD44EBBBA8793EAE /* SpannApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A0B69F0349142149713C17 /* SpannApp.swift */; };
+		2B72FA0AB3246688085FD692 /* SpannWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2B5651F50D751EF976FC1 /* SpannWidgetBundle.swift */; };
+		3B3F9686A757967B812933D4 /* SpannWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774D5B0B51D608436D9CB7F /* SpannWidget.swift */; };
+		51A4DB8E92714FE820C0DEB9 /* SharedTimerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62A72235694EB2E73951A0 /* SharedTimerSnapshot.swift */; };
+		58A107E4DF693B8B63BF77BB /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7CA8D133F7F861A0986FE /* MenuBarView.swift */; };
+		7765CD93283E9AC82EC955F5 /* TrackerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69421B3E84205E4356942CEC /* TrackerStore.swift */; };
+		D793CBBFB8B94F4B9372BDC7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E34BB555A18D24A5D90A5B /* Models.swift */; };
+		E546E13C86D20074B24ECFF1 /* IdleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD56018790F73F1836E4A4 /* IdleMonitor.swift */; };
+		EDC0A29390FCE9220DEF8180 /* SharedTimerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62A72235694EB2E73951A0 /* SharedTimerSnapshot.swift */; };
+		FA3A04A9C315B8861174F980 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B4DD61086048D3E1545E5 /* SettingsView.swift */; };
+		FB0A5FEE6A9D0C7AEFD042A1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7DB9529D9343EE0100A0FD /* HistoryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5EDD1B2E86089A507BA3EA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF4913CF9113D5027D1E8EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8E3B7889DE8030E0E84256;
+			remoteInfo = SpannWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E008EFBEAA79529F324436E6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				07A5AD4C74D2A073BB15C9E2 /* SpannWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		23AD56018790F73F1836E4A4 /* IdleMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleMonitor.swift; sourceTree = "<group>"; };
+		2463D95D2ACA2ABF5C49CF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		59C641972EADF1A2EA07059C /* SpannWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpannWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B2B5651F50D751EF976FC1 /* SpannWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpannWidgetBundle.swift; sourceTree = "<group>"; };
+		69421B3E84205E4356942CEC /* TrackerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerStore.swift; sourceTree = "<group>"; };
+		7ECE3EE86B3B697795EA7482 /* Spann.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spann.entitlements; sourceTree = "<group>"; };
+		95A0B69F0349142149713C17 /* SpannApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpannApp.swift; sourceTree = "<group>"; };
+		98E34BB555A18D24A5D90A5B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9B7DB9529D9343EE0100A0FD /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		A774D5B0B51D608436D9CB7F /* SpannWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpannWidget.swift; sourceTree = "<group>"; };
+		C5821DB8999AA26DD15D0D38 /* Spann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spann.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B167B15B4F8A1CDF2227C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C8F7CA8D133F7F861A0986FE /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		D88B4DD61086048D3E1545E5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E830FC57B75FDE76ECA83161 /* SpannWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpannWidget.entitlements; sourceTree = "<group>"; };
+		FB62A72235694EB2E73951A0 /* SharedTimerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTimerSnapshot.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		149D38DD8D142545F42FDB27 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FB62A72235694EB2E73951A0 /* SharedTimerSnapshot.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7896BAEAD7BA8908AB7B1F4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5821DB8999AA26DD15D0D38 /* Spann.app */,
+				59C641972EADF1A2EA07059C /* SpannWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4A370FE89652CFEDF89FF5E /* SpannWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2463D95D2ACA2ABF5C49CF0F /* Info.plist */,
+				E830FC57B75FDE76ECA83161 /* SpannWidget.entitlements */,
+				A774D5B0B51D608436D9CB7F /* SpannWidget.swift */,
+				63B2B5651F50D751EF976FC1 /* SpannWidgetBundle.swift */,
+			);
+			path = SpannWidget;
+			sourceTree = "<group>";
+		};
+		C3CE03E7701CEC2C8A31B244 = {
+			isa = PBXGroup;
+			children = (
+				149D38DD8D142545F42FDB27 /* Shared */,
+				D0D486EC4A48C42546F1F38A /* Spann */,
+				B4A370FE89652CFEDF89FF5E /* SpannWidget */,
+				7896BAEAD7BA8908AB7B1F4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0D486EC4A48C42546F1F38A /* Spann */ = {
+			isa = PBXGroup;
+			children = (
+				9B7DB9529D9343EE0100A0FD /* HistoryView.swift */,
+				23AD56018790F73F1836E4A4 /* IdleMonitor.swift */,
+				C5B167B15B4F8A1CDF2227C4 /* Info.plist */,
+				C8F7CA8D133F7F861A0986FE /* MenuBarView.swift */,
+				98E34BB555A18D24A5D90A5B /* Models.swift */,
+				D88B4DD61086048D3E1545E5 /* SettingsView.swift */,
+				7ECE3EE86B3B697795EA7482 /* Spann.entitlements */,
+				95A0B69F0349142149713C17 /* SpannApp.swift */,
+				69421B3E84205E4356942CEC /* TrackerStore.swift */,
+			);
+			path = Spann;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F8E3B7889DE8030E0E84256 /* SpannWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6ACBA3D9513DFD60D22F824 /* Build configuration list for PBXNativeTarget "SpannWidget" */;
+			buildPhases = (
+				FB02E4391AD82DE3BB5A584C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpannWidget;
+			packageProductDependencies = (
+			);
+			productName = SpannWidget;
+			productReference = 59C641972EADF1A2EA07059C /* SpannWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9EC6C223DBBDCBE658DB4DFB /* Spann */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2669F3668DB1602428CEDC74 /* Build configuration list for PBXNativeTarget "Spann" */;
+			buildPhases = (
+				2127DC733E3F4B34AFA22D14 /* Sources */,
+				E008EFBEAA79529F324436E6 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1DC1BDE173CD740DC1EBA4C /* PBXTargetDependency */,
+			);
+			name = Spann;
+			packageProductDependencies = (
+			);
+			productName = Spann;
+			productReference = C5821DB8999AA26DD15D0D38 /* Spann.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF4913CF9113D5027D1E8EBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5F8E3B7889DE8030E0E84256 = {
+						ProvisioningStyle = Automatic;
+					};
+					9EC6C223DBBDCBE658DB4DFB = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EFB92E545530616D01C0FC99 /* Build configuration list for PBXProject "Spann" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C3CE03E7701CEC2C8A31B244;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7896BAEAD7BA8908AB7B1F4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EC6C223DBBDCBE658DB4DFB /* Spann */,
+				5F8E3B7889DE8030E0E84256 /* SpannWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2127DC733E3F4B34AFA22D14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0A5FEE6A9D0C7AEFD042A1 /* HistoryView.swift in Sources */,
+				E546E13C86D20074B24ECFF1 /* IdleMonitor.swift in Sources */,
+				58A107E4DF693B8B63BF77BB /* MenuBarView.swift in Sources */,
+				D793CBBFB8B94F4B9372BDC7 /* Models.swift in Sources */,
+				FA3A04A9C315B8861174F980 /* SettingsView.swift in Sources */,
+				51A4DB8E92714FE820C0DEB9 /* SharedTimerSnapshot.swift in Sources */,
+				0B9EEE53AD44EBBBA8793EAE /* SpannApp.swift in Sources */,
+				7765CD93283E9AC82EC955F5 /* TrackerStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB02E4391AD82DE3BB5A584C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC0A29390FCE9220DEF8180 /* SharedTimerSnapshot.swift in Sources */,
+				3B3F9686A757967B812933D4 /* SpannWidget.swift in Sources */,
+				2B72FA0AB3246688085FD692 /* SpannWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1DC1BDE173CD740DC1EBA4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F8E3B7889DE8030E0E84256 /* SpannWidget */;
+			targetProxy = E5EDD1B2E86089A507BA3EA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2ACC49791828995600B163F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		30F56DC2F6B0ECE90536DBA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spann/Spann.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Spann/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spann.tracker;
+				PRODUCT_NAME = Spann;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4B51456714BE3BEA532FF978 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		549D215EC422321A6DAAB03D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spann/Spann.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Spann/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spann.tracker;
+				PRODUCT_NAME = Spann;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		960EACB3CA868D4C5EEAD53C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpannWidget/SpannWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = SpannWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spann.tracker.widget;
+				PRODUCT_NAME = SpannWidget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B3E6F47FDDFB91FDDCC36DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpannWidget/SpannWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = SpannWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spann.tracker.widget;
+				PRODUCT_NAME = SpannWidget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2669F3668DB1602428CEDC74 /* Build configuration list for PBXNativeTarget "Spann" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F56DC2F6B0ECE90536DBA8 /* Debug */,
+				549D215EC422321A6DAAB03D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A6ACBA3D9513DFD60D22F824 /* Build configuration list for PBXNativeTarget "SpannWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E6F47FDDFB91FDDCC36DB7 /* Debug */,
+				960EACB3CA868D4C5EEAD53C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EFB92E545530616D01C0FC99 /* Build configuration list for PBXProject "Spann" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ACC49791828995600B163F8 /* Debug */,
+				4B51456714BE3BEA532FF978 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF4913CF9113D5027D1E8EBE /* Project object */;
+}

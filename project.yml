@@ -1,0 +1,63 @@
+name: Spann
+
+options:
+  bundleIdPrefix: com.spann
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  Spann:
+    type: application
+    platform: macOS
+    sources:
+      - path: Spann
+      - path: Shared
+    info:
+      path: Spann/Info.plist
+    entitlements:
+      path: Spann/Spann.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.spann.tracker
+        PRODUCT_NAME: Spann
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+    dependencies:
+      - target: SpannWidget
+        embed: true
+
+  SpannWidget:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: SpannWidget
+      - path: Shared
+    info:
+      path: SpannWidget/Info.plist
+    entitlements:
+      path: SpannWidget/SpannWidget.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.spann.tracker.widget
+        PRODUCT_NAME: SpannWidget
+        SKIP_INSTALL: YES
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+
+schemes:
+  Spann:
+    build:
+      targets:
+        Spann: all
+        SpannWidget: all
+    run:
+      config: Debug
+    archive:
+      config: Release
