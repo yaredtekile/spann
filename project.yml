@@ -22,6 +22,8 @@ targets:
     info:
       path: Spann/Info.plist
       properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         LSUIElement: true
         LSApplicationCategoryType: public.app-category.productivity
         NSInputMonitoringUsageDescription: Spann uses inactivity duration to ask whether you are still working. It never records what you type or click.
