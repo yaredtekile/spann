@@ -72,13 +72,37 @@
       font-size: 15px;
     }
 
-    .nav-note {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-links span {
       color: var(--muted);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--ink); }
 
     .hero {
       min-height: 690px;
@@ -465,6 +489,7 @@
       .orbit { width: 320px; height: 320px; }
       .section { padding: 70px 0; }
       footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; }
+      .nav-links { gap: 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -479,7 +504,10 @@
         <span class="mark">⌛</span>
         SPANN
       </a>
-      <span class="nav-note">macOS 14+ · Early access</span>
+      <div class="nav-links">
+        <a href="https://github.com/yaredtekile/spann">GitHub</a>
+        <span>macOS 14+ · Early access</span>
+      </div>
     </nav>
 
     <main>
@@ -495,9 +523,9 @@
             <a class="button primary" href="/download/Spann-0.1.0-unsigned.dmg" download>
               Download preview <span aria-hidden="true">↓</span>
             </a>
-            <a class="button secondary" href="#install">How to install</a>
+            <a class="button secondary" href="https://github.com/yaredtekile/spann">View source</a>
           </div>
-          <p class="caveat">Unsigned preview · Free · Apple silicon · macOS 14 or newer</p>
+          <p class="caveat">Open source · Unsigned preview · Free · Apple silicon · macOS 14 or newer</p>
         </div>
 
         <div class="app-stage" aria-label="Spann menu bar timer preview">
@@ -594,7 +622,7 @@
 
     <footer>
       <span>© 2026 Spann · Built by Yared Tekile</span>
-      <span>Private by design. Simple on purpose.</span>
+      <a href="https://github.com/yaredtekile/spann">Source on GitHub</a>
     </footer>
   </div>
 </body>

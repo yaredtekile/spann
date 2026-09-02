@@ -4,7 +4,11 @@ Spann is a local-first macOS time tracker that lives in the menu bar. It keeps
 project timers close at hand without requiring an account, browser tab, or
 cloud service.
 
-> Spann is currently an early version and must be built from source.
+- Site: [spann.yared.site](https://spann.yared.site)
+- Source: [github.com/yaredtekile/spann](https://github.com/yaredtekile/spann)
+
+> Spann is currently an early unsigned preview. macOS may show an unidentified
+> developer warning until the app is notarized.
 
 ## Why I built it
 
@@ -124,3 +128,7 @@ controls open Spann to pause, resume, or stop the active timer.
 Projects, timer state, history, and widget snapshots are stored locally through
 the `group.com.spann.tracker` App Group. Spann currently has no account system,
 analytics, or cloud synchronization.
+
+## License
+
+Spann is open source under the [MIT License](LICENSE).
